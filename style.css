@@ -1,0 +1,143 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  font-size: 62.5%;
+
+  --color-text: hsl(240, 6%, 21%);
+  --bg-button-sound: hsl(240, 9%, 89%);
+  --bg-sound-controls: hsl(194, 97%, 31%);
+
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-text);
+
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  transition: all 500ms;
+
+}
+body.active {
+  background-color: #121214;
+  color: #fff;
+}
+
+
+.dark-mode {
+  position: absolute;
+  right: 6.4rem;
+  top: 6.4rem;
+}
+main {
+  min-width: 821px;
+
+  padding-inline: 3rem;
+  margin: auto auto;
+
+
+  display: flex;
+  align-items: center;
+  gap: clamp(4rem, 6rem + 13vw, 19.2rem);
+}
+.timer {
+  display: flex;
+
+  font-weight: 500;
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+
+  margin-bottom: 1.7rem;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.controls button,
+.dark-mode button {
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+}
+.sounds-controls {
+  display: grid;
+  grid-template-areas: '1fr 1fr';
+  gap: 3.2rem;
+}
+
+.hide {
+  display: none;
+}
+
+
+ .sound-forest,
+ .sound-rain,
+ .sound-cafeteria,
+ .sound-fireplace {
+  width: 13.8rem;
+  height: 15.2rem;
+
+  border: none;
+  border-radius: 2.4rem;
+
+  background-color: var(--bg-button-sound);
+
+  cursor: pointer;
+
+  transition: all 500ms;
+}
+.sounds-controls button svg {
+  padding-inline: 3.5rem;
+  padding-block: 2rem;
+}
+.active {
+  background-color: #16637c;
+}
+
+
+.active button svg path {
+  fill: #fff;
+}
+
+.dark {
+  background-color: #29292E;
+  fill: #fff;
+}
+.sound-forest.dark.active, .sound-rain.dark.active, .sound-cafeteria.dark.active, .sound-fireplace.dark.active {
+  background-color: #348099;
+
+}
+
+input {
+  cursor: pointer;
+ 
+
+}
+
+[type="range"] {
+  appearance: none;
+  width: 9rem;
+  height: 0.4rem;
+  border-radius: 0.5rem;
+
+}
+[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.dark[type="range"]::-webkit-slider-thumb {
+  background-color: #29292E;
+
+}
+
+
+
